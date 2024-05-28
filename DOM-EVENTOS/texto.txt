@@ -1,0 +1,40 @@
+DOM-Eventos
+
+Formas de agregar Eventos
+*online
+*funcional
+*manejador de Eventos
+
+Tipos de Eventos
+
+Del toque
+*click
+*dblclick
+
+Del raton
+*mouseover
+*mouseout
+*otros
+
+Formularios
+*input
+*submit
+*change
+*focus
+*blur
+
+teclado
+*keypress
+*keyup
+*keydown
+
+Pantalla
+*drop
+*drag
+*dragend
+*dragstart
+
+Del navegador
+*load
+*DOMContentloaded
+*scroll
