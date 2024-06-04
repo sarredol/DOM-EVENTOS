@@ -33,7 +33,7 @@ function crearTarea(){
         <td>${con++} </td>
         <td>${textoTarea} </td>
         <td>
-            <button class= "btn btn-warning" type= "button">✍🏽</button>
+            <button id="btnEditar" onclick= "editarTarea()" class= "btn btn-warning" type= "button">✍🏽</button>
             <button onclick= "eliminarTarea()" class="btn btn-danger" type ="button">🗑️</button>
         </td>
        `;
@@ -44,10 +44,34 @@ function crearTarea(){
 
 //funcion para eliminar una tarea
 function eliminarTarea(){
-    let confirmar = confirm("¿Deseas elimianr esta tarea?")
+    let confirmar = confirm("¿Deseas eliminar esta tarea?")
     console.log(event.target);
     if(confirmar){
         let btn = event.target; //Devuelve la etiqueta que devuelve el evento
         btn.parentElement.parentElement.remove();//Selecciona la etiqueta padre y la elimina
     }
+}
+
+// function editarTarea(){
+//     let editar = document.querySelector ("#btnEditar")
+//     //console.log(editar)
+//     if(editar){
+        
+//         let valorNuevo = prompt ("Digite el nuevo valor");
+//         let campo = textoTarea;
+//         campo.value = valorNuevo;
+
+
+//     }
+// }
+
+//Función para editar una tarea
+function editarTarea(){
+    let fila = btnEditar.parentNode.parentNode;
+    let nuevoTexto = prompt("Edita la tarea: ");
+    if (nuevoTexto == ""){
+        alert("Debes escribir una tarea")
+    }else{
+        fila.children[1].innerText = nuevoTexto;
+    }
 }
